@@ -13,7 +13,7 @@ public struct CurrentEWSTransformer: Mapper {
     public typealias Request = Any
     public typealias Response = DoctorHistoryEWSDataResponse
     public typealias Entity = DoctorHistoryEWSDataResponse
-    public typealias Domain = DoctorHistoryEWSModel
+    public typealias Domain = CurrentEWSModel
     
     public init(){}
     
@@ -21,13 +21,13 @@ public struct CurrentEWSTransformer: Mapper {
         fatalError()
     }
     
-    public func transformEntityToDomain(entity: DoctorHistoryEWSDataResponse) -> DoctorHistoryEWSModel {
+    public func transformEntityToDomain(entity: DoctorHistoryEWSDataResponse) -> CurrentEWSModel {
         fatalError()
     }
     
-    public func transformResponseToDomain(request: Request?, response: DoctorHistoryEWSDataResponse) -> DoctorHistoryEWSModel {
+    public func transformResponseToDomain(request: Request?, response: DoctorHistoryEWSDataResponse) -> CurrentEWSModel {
         
-        return DoctorHistoryEWSModel(
+        return CurrentEWSModel(
             user_code: response.user_code,
             point: response.point,
             result: response.result,
